@@ -1,0 +1,13 @@
+train: ../train/images
+val: ../valid/images
+test: ../test/images
+
+nc: 9
+names: ['accident', 'acc', 'bus', 'car', 'car-accident', 'motor', 'motor-accident', 'people-accident', 'truck']
+
+roboflow:
+  workspace: jayesh-naidu
+  project: accident-detection-oyj8z-scnyw
+  version: 1
+  license: CC BY 4.0
+  url: https://universe.roboflow.com/jayesh-naidu/accident-detection-oyj8z-scnyw/dataset/1

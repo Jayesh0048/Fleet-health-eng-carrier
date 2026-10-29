@@ -1,0 +1,503 @@
+
+from __future__ import annotations
+
+import json
+import os
+import uuid
+from collections import Counter, defaultdict
+from datetime import datetime, timezone
+from pathlib import Path
+from typing import Any
+
+import joblib
+
+from .settings import (
+    SUBSYSTEM_LABELS,
+    URGENCY_LABELS,
+    artifacts_dir,
+    min_macro_f1,
+    min_reviewed_samples,
+    min_samples_per_class,
+)
+from .store import connect, normalize_text, utc_now_iso
+
+
+class InsufficientReviewedData(RuntimeError):
+    """Raised when the reviewed data is not suitable for training."""
+
+
+def _allowed_labels(values: Any) -> set[str]:
+    """Support either a sequence of label strings or a mapping of labels."""
+    if isinstance(values, dict):
+        values = values.keys()
+    return {str(value) for value in values}
+
+
+def _load_reviewed_with_details(
+    path: str | Path | None = None,
+) -> tuple[list[dict[str, Any]], dict[str, Any]]:
+    """
+    Load reviewed records and deduplicate using text re-normalized from raw_text.
+
+    Exact duplicate text with conflicting subsystem or urgency labels is excluded.
+    The original raw_text remains unchanged in the database.
+    """
+    conn = connect(path)
+
+    try:
+        db_rows = conn.execute(
+            """
+            SELECT
+                sample_id,
+                raw_text,
+                normalized_text,
+                reviewed_subsystem,
+                reviewed_urgency,
+                reviewer,
+                reviewed_at
+            FROM dvir_samples
+            WHERE reviewed_subsystem IS NOT NULL
+              AND reviewed_urgency IS NOT NULL
+              AND reviewer IS NOT NULL
+              AND TRIM(reviewer) <> ''
+            ORDER BY COALESCE(reviewed_at, ''), sample_id
+            """
+        ).fetchall()
+    finally:
+        conn.close()
+
+    groups: dict[str, list[dict[str, Any]]] = defaultdict(list)
+    empty_text_rows = 0
+
+    for row in db_rows:
+        item = dict(row)
+        raw_text = str(item.get("raw_text") or "").strip()
+
+        # Use the source text rather than trusting a potentially stale cache.
+        clean_text = normalize_text(raw_text)
+
+        if not clean_text:
+            empty_text_rows += 1
+            continue
+
+        item["normalized_text"] = clean_text
+        groups[clean_text].append(item)
+
+    accepted: list[dict[str, Any]] = []
+    conflicting_groups = 0
+
+    for clean_text, group in groups.items():
+        label_pairs = {
+            (
+                str(item["reviewed_subsystem"]),
+                str(item["reviewed_urgency"]),
+            )
+            for item in group
+        }
+
+        # Don't silently choose a label when reviewers disagree.
+        if len(label_pairs) != 1:
+            conflicting_groups += 1
+            continue
+
+        # Rows are ordered chronologically, so use the latest consistent review.
+        item = dict(group[-1])
+        item["normalized_text"] = clean_text
+        accepted.append(item)
+
+    details = {
+        "reviewed_labeled_rows_before_filtering": len(db_rows),
+        "empty_text_rows_excluded": empty_text_rows,
+        "conflicting_duplicate_groups_excluded": conflicting_groups,
+        "unique_reviewed_notes_after_filtering": len(accepted),
+    }
+
+    return accepted, details
+
+
+def _load_reviewed(
+    path: str | Path | None = None,
+) -> list[dict[str, Any]]:
+    """Compatibility wrapper for callers that only need the reviewed rows."""
+    rows, _ = _load_reviewed_with_details(path)
+    return rows
+
+
+def _class_support(values: list[str]) -> dict[str, int]:
+    return dict(Counter(values))
+
+
+def training_readiness(
+    path: str | Path | None = None,
+) -> tuple[bool, list[str], dict[str, Any]]:
+    rows, load_details = _load_reviewed_with_details(path)
+
+    required_subsystems = _allowed_labels(SUBSYSTEM_LABELS)
+    required_urgencies = _allowed_labels(URGENCY_LABELS)
+
+    subsystem_counts = _class_support(
+        [str(row["reviewed_subsystem"]) for row in rows]
+    )
+    urgency_counts = _class_support(
+        [str(row["reviewed_urgency"]) for row in rows]
+    )
+
+    # Observed counts include zero for every expected label.
+    subsystem_counts = {
+        label: subsystem_counts.get(label, 0)
+        for label in sorted(required_subsystems)
+    } | {
+        label: count
+        for label, count in _class_support(
+            [str(row["reviewed_subsystem"]) for row in rows]
+        ).items()
+        if label not in required_subsystems
+    }
+
+    urgency_counts = {
+        label: urgency_counts.get(label, 0)
+        for label in sorted(required_urgencies)
+    } | {
+        label: count
+        for label, count in _class_support(
+            [str(row["reviewed_urgency"]) for row in rows]
+        ).items()
+        if label not in required_urgencies
+    }
+
+    details: dict[str, Any] = {
+        **load_details,
+        "subsystem_class_counts": subsystem_counts,
+        "urgency_class_counts": urgency_counts,
+        "required_subsystem_labels": sorted(required_subsystems),
+        "required_urgency_labels": sorted(required_urgencies),
+    }
+
+    reasons: list[str] = []
+
+    minimum_total = int(min_reviewed_samples())
+    minimum_class = max(4, int(min_samples_per_class()))
+
+    if len(rows) < minimum_total:
+        reasons.append(
+            f"Need at least {minimum_total} unique reviewed notes; "
+            f"found {len(rows)}."
+        )
+
+    details["minimum_unique_reviewed_notes"] = minimum_total
+    details["minimum_samples_per_class"] = minimum_class
+
+    observed_subsystems = {
+        str(row["reviewed_subsystem"]) for row in rows
+    }
+    observed_urgencies = {
+        str(row["reviewed_urgency"]) for row in rows
+    }
+
+    missing_subsystems = sorted(required_subsystems - observed_subsystems)
+    missing_urgencies = sorted(required_urgencies - observed_urgencies)
+
+    unexpected_subsystems = sorted(observed_subsystems - required_subsystems)
+    unexpected_urgencies = sorted(observed_urgencies - required_urgencies)
+
+    if missing_subsystems:
+        reasons.append(
+            f"Required subsystem labels missing from reviewed data: "
+            f"{missing_subsystems}"
+        )
+
+    if missing_urgencies:
+        reasons.append(
+            f"Required urgency labels missing from reviewed data: "
+            f"{missing_urgencies}"
+        )
+
+    if unexpected_subsystems:
+        reasons.append(
+            f"Unknown subsystem labels must be reconciled: "
+            f"{unexpected_subsystems}"
+        )
+
+    if unexpected_urgencies:
+        reasons.append(
+            f"Unknown urgency labels must be reconciled: "
+            f"{unexpected_urgencies}"
+        )
+
+    for target, counts in (
+        ("subsystem", subsystem_counts),
+        ("urgency", urgency_counts),
+    ):
+        under_supported = {
+            label: count
+            for label, count in counts.items()
+            if count < minimum_class
+        }
+
+        if under_supported:
+            reasons.append(
+                f"Insufficient examples for {target} class(es); "
+                f"need at least {minimum_class} each: {under_supported}"
+            )
+
+    return not reasons, reasons, details
+
+
+def _build_classifier(random_state: int = 42) -> Any:
+    """Create a fresh CPU-based TF-IDF text classifier."""
+    from sklearn.feature_extraction.text import TfidfVectorizer
+    from sklearn.pipeline import FeatureUnion, Pipeline
+    from sklearn.linear_model import SGDClassifier
+
+    return Pipeline(
+        [
+            (
+                "features",
+                FeatureUnion(
+                    [
+                        (
+                            "word",
+                            TfidfVectorizer(
+                                analyzer="word",
+                                ngram_range=(1, 2),
+                                min_df=2,
+                                max_features=50000,
+                                strip_accents="unicode",
+                                sublinear_tf=True,
+                            ),
+                        ),
+                        (
+                            "char",
+                            TfidfVectorizer(
+                                analyzer="char_wb",
+                                ngram_range=(3, 5),
+                                min_df=2,
+                                max_features=75000,
+                                strip_accents="unicode",
+                                sublinear_tf=True,
+                            ),
+                        ),
+                    ]
+                ),
+            ),
+            (
+                "classifier",
+                SGDClassifier(
+                    loss="log_loss",
+                    class_weight="balanced",
+                    max_iter=80,
+                    tol=1e-3,
+                    alpha=1e-5,
+                    random_state=random_state,
+                ),
+            ),
+        ]
+    )
+
+
+def train_candidate(
+    path: str | Path | None = None,
+    output_dir: str | Path | None = None,
+) -> dict[str, Any]:
+    """
+    Evaluate a text classifier on a stratified holdout, refit on all eligible
+    reviewed data, and write a candidate artifact plus manifest.
+
+    This function never promotes a candidate to production.
+    """
+    ready, reasons, readiness_details = training_readiness(path)
+
+    if not ready:
+        raise InsufficientReviewedData(" ".join(reasons))
+
+    from sklearn.metrics import (
+        accuracy_score,
+        classification_report,
+        f1_score,
+    )
+    from sklearn.model_selection import train_test_split
+
+    rows = _load_reviewed(path)
+
+    texts = [str(row["normalized_text"]) for row in rows]
+    labels_by_target = {
+        "subsystem": [
+            str(row["reviewed_subsystem"]) for row in rows
+        ],
+        "urgency": [
+            str(row["reviewed_urgency"]) for row in rows
+        ],
+    }
+
+    random_state = 42
+    final_models: dict[str, Any] = {}
+    metrics: dict[str, Any] = {}
+
+    for target, labels in labels_by_target.items():
+        try:
+            X_train, X_test, y_train, y_test = train_test_split(
+                texts,
+                labels,
+                test_size=0.25,
+                random_state=random_state,
+                stratify=labels,
+            )
+        except ValueError as exc:
+            raise InsufficientReviewedData(
+                f"Could not create a stratified validation split for "
+                f"{target}: {exc}"
+            ) from exc
+
+        # Evaluate on held-out examples before refitting.
+        validation_model = _build_classifier(random_state=random_state)
+        validation_model.fit(X_train, y_train)
+        predictions = validation_model.predict(X_test)
+
+        macro_f1 = float(
+            f1_score(
+                y_test,
+                predictions,
+                average="macro",
+                zero_division=0,
+            )
+        )
+
+        metrics[target] = {
+            "accuracy": float(accuracy_score(y_test, predictions)),
+            "macro_f1": macro_f1,
+            "n_train_for_validation": len(y_train),
+            "n_test": len(y_test),
+            "class_counts": _class_support(labels),
+            "classification_report": classification_report(
+                y_test,
+                predictions,
+                output_dict=True,
+                zero_division=0,
+            ),
+        }
+
+        # Keep a separate candidate trained on every eligible reviewed note.
+        final_model = _build_classifier(random_state=random_state)
+        final_model.fit(texts, labels)
+        final_models[target] = final_model
+
+    threshold = float(min_macro_f1())
+    validation_gate_passed = all(
+        metrics[target]["macro_f1"] >= threshold
+        for target in ("subsystem", "urgency")
+    )
+
+    base_dir = (
+        Path(output_dir).expanduser().resolve()
+        if output_dir is not None
+        else (Path(artifacts_dir()).expanduser().resolve() / "dvir_candidates")
+    )
+    base_dir.mkdir(parents=True, exist_ok=True)
+
+    stamp = datetime.now(timezone.utc).strftime("%Y%m%dT%H%M%S%fZ")
+    unique_id = uuid.uuid4().hex[:8]
+
+    model_path = base_dir / f"dvir_candidate_{stamp}_{unique_id}.joblib"
+    manifest_path = base_dir / f"dvir_candidate_{stamp}_{unique_id}.json"
+
+    payload = {
+        "subsystem_model": final_models["subsystem"],
+        "urgency_model": final_models["urgency"],
+        "model_type": "TFIDF(word+char)+SGDClassifier(log_loss)",
+        "trained_at": utc_now_iso(),
+        "training_rows": len(rows),
+        "feature_policy": (
+            "Text normalized from raw_text; human-reviewed labels only; "
+            "exact conflicting texts excluded."
+        ),
+        "evaluation_method": "Random stratified 75/25 holdout",
+        "validation_metrics_apply_to": "The validation split, not the full-fit candidate",
+        "final_candidate_refit_on_all_eligible_rows": True,
+        "safety_policy": (
+            "Predictions are suggestions only; they must never establish "
+            "or clear a dispatch safety hold."
+        ),
+        "metrics": metrics,
+    }
+
+    manifest = {
+        "candidate_model": str(model_path),
+        "manifest_path": str(manifest_path),
+        "trained_at": payload["trained_at"],
+        "training_rows": len(rows),
+        "data_details": readiness_details,
+        "metrics": metrics,
+        "minimum_macro_f1_threshold": threshold,
+        "validation_gate_passed": validation_gate_passed,
+        "auto_promoted": False,
+        "note": (
+            "Manual review is still required. A random split can overestimate "
+            "performance when similar reports from the same driver or period "
+            "appear in both splits. Use chronological or group-separated "
+            "validation before a production decision."
+        ),
+    }
+
+    # Avoid leaving a partially written final artifact if writing fails.
+    temp_model_path = model_path.with_name(model_path.name + ".tmp")
+    temp_manifest_path = manifest_path.with_name(manifest_path.name + ".tmp")
+
+    try:
+        joblib.dump(payload, temp_model_path, compress=3)
+        os.replace(temp_model_path, model_path)
+
+        temp_manifest_path.write_text(
+            json.dumps(manifest, indent=2, ensure_ascii=False, default=str),
+            encoding="utf-8",
+        )
+        os.replace(temp_manifest_path, manifest_path)
+    finally:
+        for temporary_path in (temp_model_path, temp_manifest_path):
+            if temporary_path.exists():
+                temporary_path.unlink()
+
+    return manifest
+
+
+def load_active_model(
+    path: str | Path | None = None,
+) -> dict[str, Any] | None:
+    """
+    Load only an explicitly active artifact.
+
+    Candidate artifacts are deliberately NOT fallback production models.
+    Only load joblib artifacts from trusted locations.
+    """
+    active_path = (
+        Path(path).expanduser().resolve()
+        if path is not None
+        else (
+            Path(artifacts_dir()).expanduser().resolve()
+            / "dvir_active"
+            / "dvir_text_model.joblib"
+        )
+    )
+
+    if not active_path.is_file():
+        return None
+
+    try:
+        payload = joblib.load(active_path)
+
+        if not isinstance(payload, dict):
+            raise ValueError("Active model artifact must contain a dictionary.")
+
+        required_keys = {"subsystem_model", "urgency_model"}
+        if not required_keys.issubset(payload):
+            raise ValueError(
+                f"Artifact is missing keys: {sorted(required_keys - set(payload))}"
+            )
+
+        return payload
+
+    except Exception as exc:
+        print(
+            f"Warning: Failed to load active model from "
+            f"{active_path}: {exc}"
+        )
+        return None

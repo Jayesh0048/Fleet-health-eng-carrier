@@ -1,0 +1,20 @@
+# Python cache & virtual environments
+__pycache__/
+*.py[cod]
+*$py.class
+.pytest_cache/
+vllm_env/
+env/
+venv/
+.env
+
+# SQLite databases & temp data
+*.db
+*.sqlite3
+fleet_health.db
+data/*.csv
+backups/
+
+# VS Code / OS files
+.vscode/
+.DS_Store

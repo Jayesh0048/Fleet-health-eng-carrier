@@ -1,0 +1,321 @@
+note,reviewed_subsystem,reviewed_severity,has_defect
+Driver noticed soft brakes and air line hiss under heavy load [Sample #1],BRAKES,HIGH,TRUE
+"Coolant leak near radiator hose clamp, engine temp elevated [Sample #2]",COOLING,HIGH,TRUE
+Slow air pressure build up on secondary tank [Sample #3],AIR_SYSTEM,MEDIUM,TRUE
+"Right steer tire tread depth low, slight steering vibration [Sample #4]",TIRES,MEDIUM,TRUE
+"DEF warning indicator illuminated on cluster, regen required [Sample #5]",AFTERTREATMENT,HIGH,TRUE
+Pre-trip passed with zero defects detected across all checkpoints [Sample #6],NONE,NORMAL,FALSE
+Driver noticed soft brakes and air line hiss under heavy load [Sample #7],BRAKES,HIGH,TRUE
+"Coolant leak near radiator hose clamp, engine temp elevated [Sample #8]",COOLING,HIGH,TRUE
+Slow air pressure build up on secondary tank [Sample #9],AIR_SYSTEM,MEDIUM,TRUE
+"Right steer tire tread depth low, slight steering vibration [Sample #10]",TIRES,MEDIUM,TRUE
+"DEF warning indicator illuminated on cluster, regen required [Sample #11]",AFTERTREATMENT,HIGH,TRUE
+Pre-trip passed with zero defects detected across all checkpoints [Sample #12],NONE,NORMAL,FALSE
+Driver noticed soft brakes and air line hiss under heavy load [Sample #13],BRAKES,HIGH,TRUE
+"Coolant leak near radiator hose clamp, engine temp elevated [Sample #14]",COOLING,HIGH,TRUE
+Slow air pressure build up on secondary tank [Sample #15],AIR_SYSTEM,MEDIUM,TRUE
+"Right steer tire tread depth low, slight steering vibration [Sample #16]",TIRES,MEDIUM,TRUE
+"DEF warning indicator illuminated on cluster, regen required [Sample #17]",AFTERTREATMENT,HIGH,TRUE
+Pre-trip passed with zero defects detected across all checkpoints [Sample #18],NONE,NORMAL,FALSE
+Driver noticed soft brakes and air line hiss under heavy load [Sample #19],BRAKES,HIGH,TRUE
+"Coolant leak near radiator hose clamp, engine temp elevated [Sample #20]",COOLING,HIGH,TRUE
+Slow air pressure build up on secondary tank [Sample #21],AIR_SYSTEM,MEDIUM,TRUE
+"Right steer tire tread depth low, slight steering vibration [Sample #22]",TIRES,MEDIUM,TRUE
+"DEF warning indicator illuminated on cluster, regen required [Sample #23]",AFTERTREATMENT,HIGH,TRUE
+Pre-trip passed with zero defects detected across all checkpoints [Sample #24],NONE,NORMAL,FALSE
+Driver noticed soft brakes and air line hiss under heavy load [Sample #25],BRAKES,HIGH,TRUE
+"Coolant leak near radiator hose clamp, engine temp elevated [Sample #26]",COOLING,HIGH,TRUE
+Slow air pressure build up on secondary tank [Sample #27],AIR_SYSTEM,MEDIUM,TRUE
+"Right steer tire tread depth low, slight steering vibration [Sample #28]",TIRES,MEDIUM,TRUE
+"DEF warning indicator illuminated on cluster, regen required [Sample #29]",AFTERTREATMENT,HIGH,TRUE
+Pre-trip passed with zero defects detected across all checkpoints [Sample #30],NONE,NORMAL,FALSE
+Driver noticed soft brakes and air line hiss under heavy load [Sample #31],BRAKES,HIGH,TRUE
+"Coolant leak near radiator hose clamp, engine temp elevated [Sample #32]",COOLING,HIGH,TRUE
+Slow air pressure build up on secondary tank [Sample #33],AIR_SYSTEM,MEDIUM,TRUE
+"Right steer tire tread depth low, slight steering vibration [Sample #34]",TIRES,MEDIUM,TRUE
+"DEF warning indicator illuminated on cluster, regen required [Sample #35]",AFTERTREATMENT,HIGH,TRUE
+Pre-trip passed with zero defects detected across all checkpoints [Sample #36],NONE,NORMAL,FALSE
+Driver noticed soft brakes and air line hiss under heavy load [Sample #37],BRAKES,HIGH,TRUE
+"Coolant leak near radiator hose clamp, engine temp elevated [Sample #38]",COOLING,HIGH,TRUE
+Slow air pressure build up on secondary tank [Sample #39],AIR_SYSTEM,MEDIUM,TRUE
+"Right steer tire tread depth low, slight steering vibration [Sample #40]",TIRES,MEDIUM,TRUE
+"DEF warning indicator illuminated on cluster, regen required [Sample #41]",AFTERTREATMENT,HIGH,TRUE
+Pre-trip passed with zero defects detected across all checkpoints [Sample #42],NONE,NORMAL,FALSE
+Driver noticed soft brakes and air line hiss under heavy load [Sample #43],BRAKES,HIGH,TRUE
+"Coolant leak near radiator hose clamp, engine temp elevated [Sample #44]",COOLING,HIGH,TRUE
+Slow air pressure build up on secondary tank [Sample #45],AIR_SYSTEM,MEDIUM,TRUE
+"Right steer tire tread depth low, slight steering vibration [Sample #46]",TIRES,MEDIUM,TRUE
+"DEF warning indicator illuminated on cluster, regen required [Sample #47]",AFTERTREATMENT,HIGH,TRUE
+Pre-trip passed with zero defects detected across all checkpoints [Sample #48],NONE,NORMAL,FALSE
+Driver noticed soft brakes and air line hiss under heavy load [Sample #49],BRAKES,HIGH,TRUE
+"Coolant leak near radiator hose clamp, engine temp elevated [Sample #50]",COOLING,HIGH,TRUE
+Slow air pressure build up on secondary tank [Sample #51],AIR_SYSTEM,MEDIUM,TRUE
+"Right steer tire tread depth low, slight steering vibration [Sample #52]",TIRES,MEDIUM,TRUE
+"DEF warning indicator illuminated on cluster, regen required [Sample #53]",AFTERTREATMENT,HIGH,TRUE
+Pre-trip passed with zero defects detected across all checkpoints [Sample #54],NONE,NORMAL,FALSE
+Driver noticed soft brakes and air line hiss under heavy load [Sample #55],BRAKES,HIGH,TRUE
+"Coolant leak near radiator hose clamp, engine temp elevated [Sample #56]",COOLING,HIGH,TRUE
+Slow air pressure build up on secondary tank [Sample #57],AIR_SYSTEM,MEDIUM,TRUE
+"Right steer tire tread depth low, slight steering vibration [Sample #58]",TIRES,MEDIUM,TRUE
+"DEF warning indicator illuminated on cluster, regen required [Sample #59]",AFTERTREATMENT,HIGH,TRUE
+Pre-trip passed with zero defects detected across all checkpoints [Sample #60],NONE,NORMAL,FALSE
+Driver noticed soft brakes and air line hiss under heavy load [Sample #61],BRAKES,HIGH,TRUE
+"Coolant leak near radiator hose clamp, engine temp elevated [Sample #62]",COOLING,HIGH,TRUE
+Slow air pressure build up on secondary tank [Sample #63],AIR_SYSTEM,MEDIUM,TRUE
+"Right steer tire tread depth low, slight steering vibration [Sample #64]",TIRES,MEDIUM,TRUE
+"DEF warning indicator illuminated on cluster, regen required [Sample #65]",AFTERTREATMENT,HIGH,TRUE
+Pre-trip passed with zero defects detected across all checkpoints [Sample #66],NONE,NORMAL,FALSE
+Driver noticed soft brakes and air line hiss under heavy load [Sample #67],BRAKES,HIGH,TRUE
+"Coolant leak near radiator hose clamp, engine temp elevated [Sample #68]",COOLING,HIGH,TRUE
+Slow air pressure build up on secondary tank [Sample #69],AIR_SYSTEM,MEDIUM,TRUE
+"Right steer tire tread depth low, slight steering vibration [Sample #70]",TIRES,MEDIUM,TRUE
+"DEF warning indicator illuminated on cluster, regen required [Sample #71]",AFTERTREATMENT,HIGH,TRUE
+Pre-trip passed with zero defects detected across all checkpoints [Sample #72],NONE,NORMAL,FALSE
+Driver noticed soft brakes and air line hiss under heavy load [Sample #73],BRAKES,HIGH,TRUE
+"Coolant leak near radiator hose clamp, engine temp elevated [Sample #74]",COOLING,HIGH,TRUE
+Slow air pressure build up on secondary tank [Sample #75],AIR_SYSTEM,MEDIUM,TRUE
+"Right steer tire tread depth low, slight steering vibration [Sample #76]",TIRES,MEDIUM,TRUE
+"DEF warning indicator illuminated on cluster, regen required [Sample #77]",AFTERTREATMENT,HIGH,TRUE
+Pre-trip passed with zero defects detected across all checkpoints [Sample #78],NONE,NORMAL,FALSE
+Driver noticed soft brakes and air line hiss under heavy load [Sample #79],BRAKES,HIGH,TRUE
+"Coolant leak near radiator hose clamp, engine temp elevated [Sample #80]",COOLING,HIGH,TRUE
+Slow air pressure build up on secondary tank [Sample #81],AIR_SYSTEM,MEDIUM,TRUE
+"Right steer tire tread depth low, slight steering vibration [Sample #82]",TIRES,MEDIUM,TRUE
+"DEF warning indicator illuminated on cluster, regen required [Sample #83]",AFTERTREATMENT,HIGH,TRUE
+Pre-trip passed with zero defects detected across all checkpoints [Sample #84],NONE,NORMAL,FALSE
+Driver noticed soft brakes and air line hiss under heavy load [Sample #85],BRAKES,HIGH,TRUE
+"Coolant leak near radiator hose clamp, engine temp elevated [Sample #86]",COOLING,HIGH,TRUE
+Slow air pressure build up on secondary tank [Sample #87],AIR_SYSTEM,MEDIUM,TRUE
+"Right steer tire tread depth low, slight steering vibration [Sample #88]",TIRES,MEDIUM,TRUE
+"DEF warning indicator illuminated on cluster, regen required [Sample #89]",AFTERTREATMENT,HIGH,TRUE
+Pre-trip passed with zero defects detected across all checkpoints [Sample #90],NONE,NORMAL,FALSE
+Driver noticed soft brakes and air line hiss under heavy load [Sample #91],BRAKES,HIGH,TRUE
+"Coolant leak near radiator hose clamp, engine temp elevated [Sample #92]",COOLING,HIGH,TRUE
+Slow air pressure build up on secondary tank [Sample #93],AIR_SYSTEM,MEDIUM,TRUE
+"Right steer tire tread depth low, slight steering vibration [Sample #94]",TIRES,MEDIUM,TRUE
+"DEF warning indicator illuminated on cluster, regen required [Sample #95]",AFTERTREATMENT,HIGH,TRUE
+Pre-trip passed with zero defects detected across all checkpoints [Sample #96],NONE,NORMAL,FALSE
+Driver noticed soft brakes and air line hiss under heavy load [Sample #97],BRAKES,HIGH,TRUE
+"Coolant leak near radiator hose clamp, engine temp elevated [Sample #98]",COOLING,HIGH,TRUE
+Slow air pressure build up on secondary tank [Sample #99],AIR_SYSTEM,MEDIUM,TRUE
+"Right steer tire tread depth low, slight steering vibration [Sample #100]",TIRES,MEDIUM,TRUE
+"DEF warning indicator illuminated on cluster, regen required [Sample #101]",AFTERTREATMENT,HIGH,TRUE
+Pre-trip passed with zero defects detected across all checkpoints [Sample #102],NONE,NORMAL,FALSE
+Driver noticed soft brakes and air line hiss under heavy load [Sample #103],BRAKES,HIGH,TRUE
+"Coolant leak near radiator hose clamp, engine temp elevated [Sample #104]",COOLING,HIGH,TRUE
+Slow air pressure build up on secondary tank [Sample #105],AIR_SYSTEM,MEDIUM,TRUE
+"Right steer tire tread depth low, slight steering vibration [Sample #106]",TIRES,MEDIUM,TRUE
+"DEF warning indicator illuminated on cluster, regen required [Sample #107]",AFTERTREATMENT,HIGH,TRUE
+Pre-trip passed with zero defects detected across all checkpoints [Sample #108],NONE,NORMAL,FALSE
+Driver noticed soft brakes and air line hiss under heavy load [Sample #109],BRAKES,HIGH,TRUE
+"Coolant leak near radiator hose clamp, engine temp elevated [Sample #110]",COOLING,HIGH,TRUE
+Slow air pressure build up on secondary tank [Sample #111],AIR_SYSTEM,MEDIUM,TRUE
+"Right steer tire tread depth low, slight steering vibration [Sample #112]",TIRES,MEDIUM,TRUE
+"DEF warning indicator illuminated on cluster, regen required [Sample #113]",AFTERTREATMENT,HIGH,TRUE
+Pre-trip passed with zero defects detected across all checkpoints [Sample #114],NONE,NORMAL,FALSE
+Driver noticed soft brakes and air line hiss under heavy load [Sample #115],BRAKES,HIGH,TRUE
+"Coolant leak near radiator hose clamp, engine temp elevated [Sample #116]",COOLING,HIGH,TRUE
+Slow air pressure build up on secondary tank [Sample #117],AIR_SYSTEM,MEDIUM,TRUE
+"Right steer tire tread depth low, slight steering vibration [Sample #118]",TIRES,MEDIUM,TRUE
+"DEF warning indicator illuminated on cluster, regen required [Sample #119]",AFTERTREATMENT,HIGH,TRUE
+Pre-trip passed with zero defects detected across all checkpoints [Sample #120],NONE,NORMAL,FALSE
+Driver noticed soft brakes and air line hiss under heavy load [Sample #121],BRAKES,HIGH,TRUE
+"Coolant leak near radiator hose clamp, engine temp elevated [Sample #122]",COOLING,HIGH,TRUE
+Slow air pressure build up on secondary tank [Sample #123],AIR_SYSTEM,MEDIUM,TRUE
+"Right steer tire tread depth low, slight steering vibration [Sample #124]",TIRES,MEDIUM,TRUE
+"DEF warning indicator illuminated on cluster, regen required [Sample #125]",AFTERTREATMENT,HIGH,TRUE
+Pre-trip passed with zero defects detected across all checkpoints [Sample #126],NONE,NORMAL,FALSE
+Driver noticed soft brakes and air line hiss under heavy load [Sample #127],BRAKES,HIGH,TRUE
+"Coolant leak near radiator hose clamp, engine temp elevated [Sample #128]",COOLING,HIGH,TRUE
+Slow air pressure build up on secondary tank [Sample #129],AIR_SYSTEM,MEDIUM,TRUE
+"Right steer tire tread depth low, slight steering vibration [Sample #130]",TIRES,MEDIUM,TRUE
+"DEF warning indicator illuminated on cluster, regen required [Sample #131]",AFTERTREATMENT,HIGH,TRUE
+Pre-trip passed with zero defects detected across all checkpoints [Sample #132],NONE,NORMAL,FALSE
+Driver noticed soft brakes and air line hiss under heavy load [Sample #133],BRAKES,HIGH,TRUE
+"Coolant leak near radiator hose clamp, engine temp elevated [Sample #134]",COOLING,HIGH,TRUE
+Slow air pressure build up on secondary tank [Sample #135],AIR_SYSTEM,MEDIUM,TRUE
+"Right steer tire tread depth low, slight steering vibration [Sample #136]",TIRES,MEDIUM,TRUE
+"DEF warning indicator illuminated on cluster, regen required [Sample #137]",AFTERTREATMENT,HIGH,TRUE
+Pre-trip passed with zero defects detected across all checkpoints [Sample #138],NONE,NORMAL,FALSE
+Driver noticed soft brakes and air line hiss under heavy load [Sample #139],BRAKES,HIGH,TRUE
+"Coolant leak near radiator hose clamp, engine temp elevated [Sample #140]",COOLING,HIGH,TRUE
+Slow air pressure build up on secondary tank [Sample #141],AIR_SYSTEM,MEDIUM,TRUE
+"Right steer tire tread depth low, slight steering vibration [Sample #142]",TIRES,MEDIUM,TRUE
+"DEF warning indicator illuminated on cluster, regen required [Sample #143]",AFTERTREATMENT,HIGH,TRUE
+Pre-trip passed with zero defects detected across all checkpoints [Sample #144],NONE,NORMAL,FALSE
+Driver noticed soft brakes and air line hiss under heavy load [Sample #145],BRAKES,HIGH,TRUE
+"Coolant leak near radiator hose clamp, engine temp elevated [Sample #146]",COOLING,HIGH,TRUE
+Slow air pressure build up on secondary tank [Sample #147],AIR_SYSTEM,MEDIUM,TRUE
+"Right steer tire tread depth low, slight steering vibration [Sample #148]",TIRES,MEDIUM,TRUE
+"DEF warning indicator illuminated on cluster, regen required [Sample #149]",AFTERTREATMENT,HIGH,TRUE
+Pre-trip passed with zero defects detected across all checkpoints [Sample #150],NONE,NORMAL,FALSE
+Driver noticed soft brakes and air line hiss under heavy load [Sample #151],BRAKES,HIGH,TRUE
+"Coolant leak near radiator hose clamp, engine temp elevated [Sample #152]",COOLING,HIGH,TRUE
+Slow air pressure build up on secondary tank [Sample #153],AIR_SYSTEM,MEDIUM,TRUE
+"Right steer tire tread depth low, slight steering vibration [Sample #154]",TIRES,MEDIUM,TRUE
+"DEF warning indicator illuminated on cluster, regen required [Sample #155]",AFTERTREATMENT,HIGH,TRUE
+Pre-trip passed with zero defects detected across all checkpoints [Sample #156],NONE,NORMAL,FALSE
+Driver noticed soft brakes and air line hiss under heavy load [Sample #157],BRAKES,HIGH,TRUE
+"Coolant leak near radiator hose clamp, engine temp elevated [Sample #158]",COOLING,HIGH,TRUE
+Slow air pressure build up on secondary tank [Sample #159],AIR_SYSTEM,MEDIUM,TRUE
+"Right steer tire tread depth low, slight steering vibration [Sample #160]",TIRES,MEDIUM,TRUE
+"DEF warning indicator illuminated on cluster, regen required [Sample #161]",AFTERTREATMENT,HIGH,TRUE
+Pre-trip passed with zero defects detected across all checkpoints [Sample #162],NONE,NORMAL,FALSE
+Driver noticed soft brakes and air line hiss under heavy load [Sample #163],BRAKES,HIGH,TRUE
+"Coolant leak near radiator hose clamp, engine temp elevated [Sample #164]",COOLING,HIGH,TRUE
+Slow air pressure build up on secondary tank [Sample #165],AIR_SYSTEM,MEDIUM,TRUE
+"Right steer tire tread depth low, slight steering vibration [Sample #166]",TIRES,MEDIUM,TRUE
+"DEF warning indicator illuminated on cluster, regen required [Sample #167]",AFTERTREATMENT,HIGH,TRUE
+Pre-trip passed with zero defects detected across all checkpoints [Sample #168],NONE,NORMAL,FALSE
+Driver noticed soft brakes and air line hiss under heavy load [Sample #169],BRAKES,HIGH,TRUE
+"Coolant leak near radiator hose clamp, engine temp elevated [Sample #170]",COOLING,HIGH,TRUE
+Slow air pressure build up on secondary tank [Sample #171],AIR_SYSTEM,MEDIUM,TRUE
+"Right steer tire tread depth low, slight steering vibration [Sample #172]",TIRES,MEDIUM,TRUE
+"DEF warning indicator illuminated on cluster, regen required [Sample #173]",AFTERTREATMENT,HIGH,TRUE
+Pre-trip passed with zero defects detected across all checkpoints [Sample #174],NONE,NORMAL,FALSE
+Driver noticed soft brakes and air line hiss under heavy load [Sample #175],BRAKES,HIGH,TRUE
+"Coolant leak near radiator hose clamp, engine temp elevated [Sample #176]",COOLING,HIGH,TRUE
+Slow air pressure build up on secondary tank [Sample #177],AIR_SYSTEM,MEDIUM,TRUE
+"Right steer tire tread depth low, slight steering vibration [Sample #178]",TIRES,MEDIUM,TRUE
+"DEF warning indicator illuminated on cluster, regen required [Sample #179]",AFTERTREATMENT,HIGH,TRUE
+Pre-trip passed with zero defects detected across all checkpoints [Sample #180],NONE,NORMAL,FALSE
+Driver noticed soft brakes and air line hiss under heavy load [Sample #181],BRAKES,HIGH,TRUE
+"Coolant leak near radiator hose clamp, engine temp elevated [Sample #182]",COOLING,HIGH,TRUE
+Slow air pressure build up on secondary tank [Sample #183],AIR_SYSTEM,MEDIUM,TRUE
+"Right steer tire tread depth low, slight steering vibration [Sample #184]",TIRES,MEDIUM,TRUE
+"DEF warning indicator illuminated on cluster, regen required [Sample #185]",AFTERTREATMENT,HIGH,TRUE
+Pre-trip passed with zero defects detected across all checkpoints [Sample #186],NONE,NORMAL,FALSE
+Driver noticed soft brakes and air line hiss under heavy load [Sample #187],BRAKES,HIGH,TRUE
+"Coolant leak near radiator hose clamp, engine temp elevated [Sample #188]",COOLING,HIGH,TRUE
+Slow air pressure build up on secondary tank [Sample #189],AIR_SYSTEM,MEDIUM,TRUE
+"Right steer tire tread depth low, slight steering vibration [Sample #190]",TIRES,MEDIUM,TRUE
+"DEF warning indicator illuminated on cluster, regen required [Sample #191]",AFTERTREATMENT,HIGH,TRUE
+Pre-trip passed with zero defects detected across all checkpoints [Sample #192],NONE,NORMAL,FALSE
+Driver noticed soft brakes and air line hiss under heavy load [Sample #193],BRAKES,HIGH,TRUE
+"Coolant leak near radiator hose clamp, engine temp elevated [Sample #194]",COOLING,HIGH,TRUE
+Slow air pressure build up on secondary tank [Sample #195],AIR_SYSTEM,MEDIUM,TRUE
+"Right steer tire tread depth low, slight steering vibration [Sample #196]",TIRES,MEDIUM,TRUE
+"DEF warning indicator illuminated on cluster, regen required [Sample #197]",AFTERTREATMENT,HIGH,TRUE
+Pre-trip passed with zero defects detected across all checkpoints [Sample #198],NONE,NORMAL,FALSE
+Driver noticed soft brakes and air line hiss under heavy load [Sample #199],BRAKES,HIGH,TRUE
+"Coolant leak near radiator hose clamp, engine temp elevated [Sample #200]",COOLING,HIGH,TRUE
+Slow air pressure build up on secondary tank [Sample #201],AIR_SYSTEM,MEDIUM,TRUE
+"Right steer tire tread depth low, slight steering vibration [Sample #202]",TIRES,MEDIUM,TRUE
+"DEF warning indicator illuminated on cluster, regen required [Sample #203]",AFTERTREATMENT,HIGH,TRUE
+Pre-trip passed with zero defects detected across all checkpoints [Sample #204],NONE,NORMAL,FALSE
+Driver noticed soft brakes and air line hiss under heavy load [Sample #205],BRAKES,HIGH,TRUE
+"Coolant leak near radiator hose clamp, engine temp elevated [Sample #206]",COOLING,HIGH,TRUE
+Slow air pressure build up on secondary tank [Sample #207],AIR_SYSTEM,MEDIUM,TRUE
+"Right steer tire tread depth low, slight steering vibration [Sample #208]",TIRES,MEDIUM,TRUE
+"DEF warning indicator illuminated on cluster, regen required [Sample #209]",AFTERTREATMENT,HIGH,TRUE
+Pre-trip passed with zero defects detected across all checkpoints [Sample #210],NONE,NORMAL,FALSE
+Driver noticed soft brakes and air line hiss under heavy load [Sample #211],BRAKES,HIGH,TRUE
+"Coolant leak near radiator hose clamp, engine temp elevated [Sample #212]",COOLING,HIGH,TRUE
+Slow air pressure build up on secondary tank [Sample #213],AIR_SYSTEM,MEDIUM,TRUE
+"Right steer tire tread depth low, slight steering vibration [Sample #214]",TIRES,MEDIUM,TRUE
+"DEF warning indicator illuminated on cluster, regen required [Sample #215]",AFTERTREATMENT,HIGH,TRUE
+Pre-trip passed with zero defects detected across all checkpoints [Sample #216],NONE,NORMAL,FALSE
+Driver noticed soft brakes and air line hiss under heavy load [Sample #217],BRAKES,HIGH,TRUE
+"Coolant leak near radiator hose clamp, engine temp elevated [Sample #218]",COOLING,HIGH,TRUE
+Slow air pressure build up on secondary tank [Sample #219],AIR_SYSTEM,MEDIUM,TRUE
+"Right steer tire tread depth low, slight steering vibration [Sample #220]",TIRES,MEDIUM,TRUE
+"DEF warning indicator illuminated on cluster, regen required [Sample #221]",AFTERTREATMENT,HIGH,TRUE
+Pre-trip passed with zero defects detected across all checkpoints [Sample #222],NONE,NORMAL,FALSE
+Driver noticed soft brakes and air line hiss under heavy load [Sample #223],BRAKES,HIGH,TRUE
+"Coolant leak near radiator hose clamp, engine temp elevated [Sample #224]",COOLING,HIGH,TRUE
+Slow air pressure build up on secondary tank [Sample #225],AIR_SYSTEM,MEDIUM,TRUE
+"Right steer tire tread depth low, slight steering vibration [Sample #226]",TIRES,MEDIUM,TRUE
+"DEF warning indicator illuminated on cluster, regen required [Sample #227]",AFTERTREATMENT,HIGH,TRUE
+Pre-trip passed with zero defects detected across all checkpoints [Sample #228],NONE,NORMAL,FALSE
+Driver noticed soft brakes and air line hiss under heavy load [Sample #229],BRAKES,HIGH,TRUE
+"Coolant leak near radiator hose clamp, engine temp elevated [Sample #230]",COOLING,HIGH,TRUE
+Slow air pressure build up on secondary tank [Sample #231],AIR_SYSTEM,MEDIUM,TRUE
+"Right steer tire tread depth low, slight steering vibration [Sample #232]",TIRES,MEDIUM,TRUE
+"DEF warning indicator illuminated on cluster, regen required [Sample #233]",AFTERTREATMENT,HIGH,TRUE
+Pre-trip passed with zero defects detected across all checkpoints [Sample #234],NONE,NORMAL,FALSE
+Driver noticed soft brakes and air line hiss under heavy load [Sample #235],BRAKES,HIGH,TRUE
+"Coolant leak near radiator hose clamp, engine temp elevated [Sample #236]",COOLING,HIGH,TRUE
+Slow air pressure build up on secondary tank [Sample #237],AIR_SYSTEM,MEDIUM,TRUE
+"Right steer tire tread depth low, slight steering vibration [Sample #238]",TIRES,MEDIUM,TRUE
+"DEF warning indicator illuminated on cluster, regen required [Sample #239]",AFTERTREATMENT,HIGH,TRUE
+Pre-trip passed with zero defects detected across all checkpoints [Sample #240],NONE,NORMAL,FALSE
+Driver noticed soft brakes and air line hiss under heavy load [Sample #241],BRAKES,HIGH,TRUE
+"Coolant leak near radiator hose clamp, engine temp elevated [Sample #242]",COOLING,HIGH,TRUE
+Slow air pressure build up on secondary tank [Sample #243],AIR_SYSTEM,MEDIUM,TRUE
+"Right steer tire tread depth low, slight steering vibration [Sample #244]",TIRES,MEDIUM,TRUE
+"DEF warning indicator illuminated on cluster, regen required [Sample #245]",AFTERTREATMENT,HIGH,TRUE
+Pre-trip passed with zero defects detected across all checkpoints [Sample #246],NONE,NORMAL,FALSE
+Driver noticed soft brakes and air line hiss under heavy load [Sample #247],BRAKES,HIGH,TRUE
+"Coolant leak near radiator hose clamp, engine temp elevated [Sample #248]",COOLING,HIGH,TRUE
+Slow air pressure build up on secondary tank [Sample #249],AIR_SYSTEM,MEDIUM,TRUE
+"Right steer tire tread depth low, slight steering vibration [Sample #250]",TIRES,MEDIUM,TRUE
+"DEF warning indicator illuminated on cluster, regen required [Sample #251]",AFTERTREATMENT,HIGH,TRUE
+Pre-trip passed with zero defects detected across all checkpoints [Sample #252],NONE,NORMAL,FALSE
+Driver noticed soft brakes and air line hiss under heavy load [Sample #253],BRAKES,HIGH,TRUE
+"Coolant leak near radiator hose clamp, engine temp elevated [Sample #254]",COOLING,HIGH,TRUE
+Slow air pressure build up on secondary tank [Sample #255],AIR_SYSTEM,MEDIUM,TRUE
+"Right steer tire tread depth low, slight steering vibration [Sample #256]",TIRES,MEDIUM,TRUE
+"DEF warning indicator illuminated on cluster, regen required [Sample #257]",AFTERTREATMENT,HIGH,TRUE
+Pre-trip passed with zero defects detected across all checkpoints [Sample #258],NONE,NORMAL,FALSE
+Driver noticed soft brakes and air line hiss under heavy load [Sample #259],BRAKES,HIGH,TRUE
+"Coolant leak near radiator hose clamp, engine temp elevated [Sample #260]",COOLING,HIGH,TRUE
+Slow air pressure build up on secondary tank [Sample #261],AIR_SYSTEM,MEDIUM,TRUE
+"Right steer tire tread depth low, slight steering vibration [Sample #262]",TIRES,MEDIUM,TRUE
+"DEF warning indicator illuminated on cluster, regen required [Sample #263]",AFTERTREATMENT,HIGH,TRUE
+Pre-trip passed with zero defects detected across all checkpoints [Sample #264],NONE,NORMAL,FALSE
+Driver noticed soft brakes and air line hiss under heavy load [Sample #265],BRAKES,HIGH,TRUE
+"Coolant leak near radiator hose clamp, engine temp elevated [Sample #266]",COOLING,HIGH,TRUE
+Slow air pressure build up on secondary tank [Sample #267],AIR_SYSTEM,MEDIUM,TRUE
+"Right steer tire tread depth low, slight steering vibration [Sample #268]",TIRES,MEDIUM,TRUE
+"DEF warning indicator illuminated on cluster, regen required [Sample #269]",AFTERTREATMENT,HIGH,TRUE
+Pre-trip passed with zero defects detected across all checkpoints [Sample #270],NONE,NORMAL,FALSE
+Driver noticed soft brakes and air line hiss under heavy load [Sample #271],BRAKES,HIGH,TRUE
+"Coolant leak near radiator hose clamp, engine temp elevated [Sample #272]",COOLING,HIGH,TRUE
+Slow air pressure build up on secondary tank [Sample #273],AIR_SYSTEM,MEDIUM,TRUE
+"Right steer tire tread depth low, slight steering vibration [Sample #274]",TIRES,MEDIUM,TRUE
+"DEF warning indicator illuminated on cluster, regen required [Sample #275]",AFTERTREATMENT,HIGH,TRUE
+Pre-trip passed with zero defects detected across all checkpoints [Sample #276],NONE,NORMAL,FALSE
+Driver noticed soft brakes and air line hiss under heavy load [Sample #277],BRAKES,HIGH,TRUE
+"Coolant leak near radiator hose clamp, engine temp elevated [Sample #278]",COOLING,HIGH,TRUE
+Slow air pressure build up on secondary tank [Sample #279],AIR_SYSTEM,MEDIUM,TRUE
+"Right steer tire tread depth low, slight steering vibration [Sample #280]",TIRES,MEDIUM,TRUE
+"DEF warning indicator illuminated on cluster, regen required [Sample #281]",AFTERTREATMENT,HIGH,TRUE
+Pre-trip passed with zero defects detected across all checkpoints [Sample #282],NONE,NORMAL,FALSE
+Driver noticed soft brakes and air line hiss under heavy load [Sample #283],BRAKES,HIGH,TRUE
+"Coolant leak near radiator hose clamp, engine temp elevated [Sample #284]",COOLING,HIGH,TRUE
+Slow air pressure build up on secondary tank [Sample #285],AIR_SYSTEM,MEDIUM,TRUE
+"Right steer tire tread depth low, slight steering vibration [Sample #286]",TIRES,MEDIUM,TRUE
+"DEF warning indicator illuminated on cluster, regen required [Sample #287]",AFTERTREATMENT,HIGH,TRUE
+Pre-trip passed with zero defects detected across all checkpoints [Sample #288],NONE,NORMAL,FALSE
+Driver noticed soft brakes and air line hiss under heavy load [Sample #289],BRAKES,HIGH,TRUE
+"Coolant leak near radiator hose clamp, engine temp elevated [Sample #290]",COOLING,HIGH,TRUE
+Slow air pressure build up on secondary tank [Sample #291],AIR_SYSTEM,MEDIUM,TRUE
+"Right steer tire tread depth low, slight steering vibration [Sample #292]",TIRES,MEDIUM,TRUE
+"DEF warning indicator illuminated on cluster, regen required [Sample #293]",AFTERTREATMENT,HIGH,TRUE
+Pre-trip passed with zero defects detected across all checkpoints [Sample #294],NONE,NORMAL,FALSE
+Driver noticed soft brakes and air line hiss under heavy load [Sample #295],BRAKES,HIGH,TRUE
+"Coolant leak near radiator hose clamp, engine temp elevated [Sample #296]",COOLING,HIGH,TRUE
+Slow air pressure build up on secondary tank [Sample #297],AIR_SYSTEM,MEDIUM,TRUE
+"Right steer tire tread depth low, slight steering vibration [Sample #298]",TIRES,MEDIUM,TRUE
+"DEF warning indicator illuminated on cluster, regen required [Sample #299]",AFTERTREATMENT,HIGH,TRUE
+Pre-trip passed with zero defects detected across all checkpoints [Sample #300],NONE,NORMAL,FALSE
+Driver noticed soft brakes and air line hiss under heavy load [Sample #301],BRAKES,HIGH,TRUE
+"Coolant leak near radiator hose clamp, engine temp elevated [Sample #302]",COOLING,HIGH,TRUE
+Slow air pressure build up on secondary tank [Sample #303],AIR_SYSTEM,MEDIUM,TRUE
+"Right steer tire tread depth low, slight steering vibration [Sample #304]",TIRES,MEDIUM,TRUE
+"DEF warning indicator illuminated on cluster, regen required [Sample #305]",AFTERTREATMENT,HIGH,TRUE
+Pre-trip passed with zero defects detected across all checkpoints [Sample #306],NONE,NORMAL,FALSE
+Driver noticed soft brakes and air line hiss under heavy load [Sample #307],BRAKES,HIGH,TRUE
+"Coolant leak near radiator hose clamp, engine temp elevated [Sample #308]",COOLING,HIGH,TRUE
+Slow air pressure build up on secondary tank [Sample #309],AIR_SYSTEM,MEDIUM,TRUE
+"Right steer tire tread depth low, slight steering vibration [Sample #310]",TIRES,MEDIUM,TRUE
+"DEF warning indicator illuminated on cluster, regen required [Sample #311]",AFTERTREATMENT,HIGH,TRUE
+Pre-trip passed with zero defects detected across all checkpoints [Sample #312],NONE,NORMAL,FALSE
+Driver noticed soft brakes and air line hiss under heavy load [Sample #313],BRAKES,HIGH,TRUE
+"Coolant leak near radiator hose clamp, engine temp elevated [Sample #314]",COOLING,HIGH,TRUE
+Slow air pressure build up on secondary tank [Sample #315],AIR_SYSTEM,MEDIUM,TRUE
+"Right steer tire tread depth low, slight steering vibration [Sample #316]",TIRES,MEDIUM,TRUE
+"DEF warning indicator illuminated on cluster, regen required [Sample #317]",AFTERTREATMENT,HIGH,TRUE
+Pre-trip passed with zero defects detected across all checkpoints [Sample #318],NONE,NORMAL,FALSE
+Driver noticed soft brakes and air line hiss under heavy load [Sample #319],BRAKES,HIGH,TRUE
+"Coolant leak near radiator hose clamp, engine temp elevated [Sample #320]",COOLING,HIGH,TRUE

@@ -1,0 +1,9 @@
+{
+  "active_model": "/home/techtruckers/Pictures/fleet_health_agent_starter/models/dvir_active/dvir_text_model.joblib",
+  "candidate_manifest": "/home/techtruckers/Pictures/fleet_health_agent_starter/models/dvir_candidates/dvir_candidate_20261022T183625748069Z.json",
+  "approved_by": "Jayesh",
+  "change_ticket": "CHG-2026-001",
+  "eligible_for_manual_review": true,
+  "approved_manually": true,
+  "safety_policy": "Model outputs are suggestions only and cannot set or clear dispatch holds."
+}

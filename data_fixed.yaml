@@ -1,0 +1,15 @@
+path: /home/techtruckers/Desktop/Accident Detection.v1-accident-detection-us.yolov11
+train: train/images
+val: valid/images
+test: test/images
+nc: 9
+names:
+- accident
+- acc
+- bus
+- car
+- car-accident
+- motor
+- motor-accident
+- people-accident
+- truck

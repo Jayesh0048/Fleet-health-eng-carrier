@@ -1,0 +1,165 @@
+{
+  "candidate_model": "/home/techtruckers/Pictures/fleet_health_agent_starter/models/dvir_candidates/dvir_candidate_20261022T183625748069Z.joblib",
+  "trained_at": "2026-10-22T18:36:25.748097+00:00",
+  "training_rows": 320,
+  "data_details": {
+    "unique_reviewed_notes": 320,
+    "usable_unique_reviewed_notes": 320,
+    "subsystem_class_counts": {
+      "BRAKES": 46,
+      "AFTERTREATMENT": 46,
+      "NONE": 45,
+      "TIRES": 46,
+      "COOLING": 46,
+      "ELECTRICAL": 45,
+      "AIR_SYSTEM": 46
+    },
+    "urgency_class_counts": {
+      "MINOR": 57,
+      "NORMAL": 102,
+      "MODERATE": 57,
+      "CRITICAL": 104
+    },
+    "all_reviewed_records": 320,
+    "conflicting_duplicate_texts": 0,
+    "minimum_samples_per_class": 5,
+    "planned_train_rows": 240,
+    "planned_test_rows": 80
+  },
+  "metrics": {
+    "subsystem": {
+      "accuracy": 1.0,
+      "macro_f1": 1.0,
+      "n_train": 240,
+      "n_test": 80,
+      "class_counts": {
+        "BRAKES": 46,
+        "AFTERTREATMENT": 46,
+        "NONE": 45,
+        "TIRES": 46,
+        "COOLING": 46,
+        "ELECTRICAL": 45,
+        "AIR_SYSTEM": 46
+      },
+      "classification_report": {
+        "AFTERTREATMENT": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1-score": 1.0,
+          "support": 12.0
+        },
+        "AIR_SYSTEM": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1-score": 1.0,
+          "support": 11.0
+        },
+        "BRAKES": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1-score": 1.0,
+          "support": 12.0
+        },
+        "COOLING": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1-score": 1.0,
+          "support": 12.0
+        },
+        "ELECTRICAL": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1-score": 1.0,
+          "support": 11.0
+        },
+        "NONE": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1-score": 1.0,
+          "support": 11.0
+        },
+        "TIRES": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1-score": 1.0,
+          "support": 11.0
+        },
+        "accuracy": 1.0,
+        "macro avg": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1-score": 1.0,
+          "support": 80.0
+        },
+        "weighted avg": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1-score": 1.0,
+          "support": 80.0
+        }
+      },
+      "device": "cuda:0"
+    },
+    "urgency": {
+      "accuracy": 0.725,
+      "macro_f1": 0.705240395614452,
+      "n_train": 240,
+      "n_test": 80,
+      "class_counts": {
+        "MINOR": 57,
+        "NORMAL": 102,
+        "MODERATE": 57,
+        "CRITICAL": 104
+      },
+      "classification_report": {
+        "CRITICAL": {
+          "precision": 0.8076923076923077,
+          "recall": 0.8076923076923077,
+          "f1-score": 0.8076923076923077,
+          "support": 26.0
+        },
+        "MINOR": {
+          "precision": 0.5294117647058824,
+          "recall": 0.6428571428571429,
+          "f1-score": 0.5806451612903226,
+          "support": 14.0
+        },
+        "MODERATE": {
+          "precision": 0.625,
+          "recall": 0.7142857142857143,
+          "f1-score": 0.6666666666666666,
+          "support": 14.0
+        },
+        "NORMAL": {
+          "precision": 0.8571428571428571,
+          "recall": 0.6923076923076923,
+          "f1-score": 0.7659574468085106,
+          "support": 26.0
+        },
+        "accuracy": 0.725,
+        "macro avg": {
+          "precision": 0.7048117323852618,
+          "recall": 0.7142857142857144,
+          "f1-score": 0.705240395614452,
+          "support": 80.0
+        },
+        "weighted avg": {
+          "precision": 0.743093487394958,
+          "recall": 0.725,
+          "f1-score": 0.7297157401052391,
+          "support": 80.0
+        }
+      },
+      "device": "cuda:0"
+    }
+  },
+  "training_device": "cuda:0",
+  "cuda_used_for_classifier_training": true,
+  "gpu_name": "NVIDIA GB10",
+  "gpu_peak_allocated_mib": 3.771,
+  "gpu_peak_reserved_mib": 4.0,
+  "minimum_macro_f1_threshold": 0.6,
+  "eligible_for_manual_review": true,
+  "auto_promoted": false,
+  "note": "TF-IDF feature extraction runs on CPU; PyTorch classifier optimization uses the recorded device. Holdout metrics alone do not establish production readiness; run time-separated validation and review class-level metrics before manual promotion."
+}

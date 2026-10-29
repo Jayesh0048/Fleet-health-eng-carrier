@@ -1,0 +1,173 @@
+{
+  "candidate_model": "/home/techtruckers/Pictures/fleet_health_agent_starter/models/dvir_candidates/dvir_candidates/dvir_candidate_20261027T203031883216Z_610cfd72.joblib",
+  "manifest_path": "/home/techtruckers/Pictures/fleet_health_agent_starter/models/dvir_candidates/dvir_candidates/dvir_candidate_20261027T203031883216Z_610cfd72.json",
+  "trained_at": "2026-10-27T20:30:31.883250+00:00",
+  "training_rows": 821,
+  "data_details": {
+    "unique_reviewed_notes": 821,
+    "unique_reviewed_notes_after_filtering": 821,
+    "subsystem_class_counts": {
+      "BRAKES": 118,
+      "COOLING": 114,
+      "AIR_SYSTEM": 121,
+      "TIRES": 112,
+      "AFTERTREATMENT": 126,
+      "ELECTRICAL": 111,
+      "NONE": 119
+    },
+    "urgency_class_counts": {
+      "MODERATE": 243,
+      "CRITICAL": 260,
+      "MINOR": 142,
+      "NORMAL": 176
+    },
+    "class_counts": {
+      "subsystem": {
+        "BRAKES": 118,
+        "COOLING": 114,
+        "AIR_SYSTEM": 121,
+        "TIRES": 112,
+        "AFTERTREATMENT": 126,
+        "ELECTRICAL": 111,
+        "NONE": 119
+      },
+      "urgency": {
+        "MODERATE": 243,
+        "CRITICAL": 260,
+        "MINOR": 142,
+        "NORMAL": 176
+      }
+    },
+    "minimum_unique_reviewed_notes": 300,
+    "minimum_samples_per_class": 5
+  },
+  "metrics": {
+    "subsystem": {
+      "accuracy": 1.0,
+      "macro_f1": 1.0,
+      "n_train_for_validation": 615,
+      "n_test": 206,
+      "class_counts": {
+        "BRAKES": 118,
+        "AFTERTREATMENT": 126,
+        "NONE": 119,
+        "TIRES": 112,
+        "COOLING": 114,
+        "ELECTRICAL": 111,
+        "AIR_SYSTEM": 121
+      },
+      "classification_report": {
+        "AFTERTREATMENT": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1-score": 1.0,
+          "support": 32.0
+        },
+        "AIR_SYSTEM": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1-score": 1.0,
+          "support": 30.0
+        },
+        "BRAKES": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1-score": 1.0,
+          "support": 30.0
+        },
+        "COOLING": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1-score": 1.0,
+          "support": 28.0
+        },
+        "ELECTRICAL": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1-score": 1.0,
+          "support": 28.0
+        },
+        "NONE": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1-score": 1.0,
+          "support": 30.0
+        },
+        "TIRES": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1-score": 1.0,
+          "support": 28.0
+        },
+        "accuracy": 1.0,
+        "macro avg": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1-score": 1.0,
+          "support": 206.0
+        },
+        "weighted avg": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1-score": 1.0,
+          "support": 206.0
+        }
+      }
+    },
+    "urgency": {
+      "accuracy": 0.8786407766990292,
+      "macro_f1": 0.8732815387227152,
+      "n_train_for_validation": 615,
+      "n_test": 206,
+      "class_counts": {
+        "MINOR": 142,
+        "NORMAL": 176,
+        "MODERATE": 243,
+        "CRITICAL": 260
+      },
+      "classification_report": {
+        "CRITICAL": {
+          "precision": 0.8205128205128205,
+          "recall": 0.9846153846153847,
+          "f1-score": 0.8951048951048951,
+          "support": 65.0
+        },
+        "MINOR": {
+          "precision": 0.8611111111111112,
+          "recall": 0.8611111111111112,
+          "f1-score": 0.8611111111111112,
+          "support": 36.0
+        },
+        "MODERATE": {
+          "precision": 0.9137931034482759,
+          "recall": 0.8688524590163934,
+          "f1-score": 0.8907563025210085,
+          "support": 61.0
+        },
+        "NORMAL": {
+          "precision": 0.9705882352941176,
+          "recall": 0.75,
+          "f1-score": 0.8461538461538461,
+          "support": 44.0
+        },
+        "accuracy": 0.8786407766990292,
+        "macro avg": {
+          "precision": 0.8915013175915814,
+          "recall": 0.8661447386857223,
+          "f1-score": 0.8732815387227152,
+          "support": 206.0
+        },
+        "weighted avg": {
+          "precision": 0.8872844417311619,
+          "recall": 0.8786407766990292,
+          "f1-score": 0.8774209799338297,
+          "support": 206.0
+        }
+      }
+    }
+  },
+  "minimum_macro_f1_threshold": 0.6,
+  "validation_gate_passed": true,
+  "auto_promoted": false,
+  "note": "Manual review is still required. A random split can overestimate performance when similar reports from the same driver or period appear in both splits. Use chronological or group-separated validation before a production decision."
+}
